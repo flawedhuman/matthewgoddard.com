@@ -1,0 +1,67 @@
+---
+
+---
+<header>
+    <div class="header-grid">
+        <a href="/">matthewgoddard.com</a>
+        <a class="resume-link" href="/pdfs/matthew-goddard-resume.pdf" target="_blank">Resume</a>
+    </div>
+</header>
+
+<style>
+
+    header {
+        padding: 1rem;
+        background-color: #000;
+    }
+
+    .header-grid {
+        margin-inline: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        display: grid;
+        text-align: center;
+    }
+
+    @media screen and (min-width: 600px) {
+        
+        .header-grid {
+            margin-inline: auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            text-align: left;
+            max-width: 1200px;
+        }
+
+    }
+
+    .header-grid a {
+        color: #FFF;
+        font-family: var(--font-uppercase);
+        font-size: 2rem;
+        text-decoration: none;
+    }
+
+    .header-grid a:first-child {
+        color: var(--primary-blue);
+        justify-self: start;
+    }
+
+    .header-grid a:first-child:hover, 
+    .header-grid a:first-child:focus-visible {
+        text-decoration: underline;
+    }
+
+    .header-grid .resume-link::after {
+        content: url(/down-arrow.svg);
+    }
+
+    @media screen and (min-width: 600px) {
+        
+        .header-grid a:not(:first-child) {
+            justify-self: end;
+        }
+
+    }
+
+</style>

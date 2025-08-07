@@ -1,0 +1,19 @@
+@import url(reset.css);
+
+:root {
+    /* COLORS */
+    --primary-blue: #35BFE1;
+    --dark-blue: #0B7089;
+    --medium-blue: #0597BB;
+
+    /* FONTS */
+    --font-uppercase: 'Bebas Neue', Arial, Verdana, sans-serif;
+    --font-lowercase: 'Bree Serif', serif;
+
+}
+
+body {
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
