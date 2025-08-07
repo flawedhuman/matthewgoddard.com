@@ -44,16 +44,24 @@
 
     .header-grid a:first-child {
         color: var(--primary-blue);
-        justify-self: start;
+        justify-self: center;
     }
 
+    @media screen and (min-width: 615px) { 
+        
+        .header-grid a:first-child {
+            justify-self: start;
+        }
+
+    }
+        
     .header-grid a:first-child:hover, 
     .header-grid a:first-child:focus-visible {
         text-decoration: underline;
     }
 
     .header-grid .resume-link::after {
-        content: url(/down-arrow.svg);
+        content: url(/images/down-arrow.svg);
     }
 
     @media screen and (min-width: 600px) {
