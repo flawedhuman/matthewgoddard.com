@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+<BaseLayout title="MATTHEWGODDARD.COM | ALBUM COVERS">
+    <Header />
+    <div class="thumb-grid">
+        <img src="/images/album-abstractions.jpg" alt="Abstractions">
+        <img src="/images/album-acres.jpg" alt="Acres">
+        <img src="/images/album-cliffhanger.jpg" alt="Cliffhanger">
+        <img src="/images/album-dust.jpg" alt="Dust">
+        <img src="/images/album-evergreen.jpg" alt="Evergreen">
+        <img src="/images/album-hindsight.jpg" alt="Hindsight">
+        <img src="/images/album-innerverse.jpg" alt="Innerverse">
+        <img src="/images/album-kung-fu.jpg" alt="Kung Fu">
+        <img src="/images/album-mcfeely.jpg" alt="McFeely">
+        <img src="/images/album-peaks.jpg" alt="Peaks">
+        <img src="/images/album-piece-by-piece.jpg" alt="Piece by Piece">
+        <img src="/images/album-plus.jpg" alt="Plus">
+        <img src="/images/album-pretend.jpg" alt="Pretend">
+        <img src="/images/album-prog.jpg" alt="Prog">
+        <img src="/images/album-street-light-riot.jpg" alt="Street Light Riot">
+        <img src="/images/album-too-many-secrets.jpg" alt="Too Many Secrets">
+        <img src="/images/album-what-if.jpg" alt="What If?">
+        <img src="/images/album-yes-man.jpg" alt="Yes Man">
+    </div>
+    <Footer />
+</BaseLayout>
+
+<style>
+
+    .thumb-grid {
+        margin-inline: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        max-width: 1200px;
+        display: grid;
+        gap: 1rem;
+    }
+    
+    @media screen and (min-width: 800px) {
+        
+        .thumb-grid {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+        }
+
+    }
+
+</style>

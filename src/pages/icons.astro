@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+<BaseLayout title="MATTHEWGODDARD.COM | ICONS">
+    <Header />
+    <div class="thumb-grid">
+        <img src="/images/icon-1.webp" alt="Thumbs Up Icon">
+        <img src="/images/icon-2.webp" alt="Stop Watch Icon">
+        <img src="/images/icon-3.webp" alt="Puzzle Icon">
+        <img src="/images/icon-4.webp" alt="Briefcase Icon">
+        <img src="/images/icon-5.webp" alt="Location Icon">
+        <img src="/images/icon-6.webp" alt="Arrow Path Icon">
+        <img src="/images/icon-7.webp" alt="Animation Icon">
+        <img src="/images/icon-8.webp" alt="Graph Magnify Icon">
+    </div>
+    <Footer />
+</BaseLayout>
+
+<style>
+
+    .thumb-grid {
+        margin-inline: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        max-width: 1200px;
+        display: grid;
+        gap: 1rem;
+    }
+    
+    @media screen and (min-width: 800px) {
+        
+        .thumb-grid {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+        }
+
+    }
+
+</style>
