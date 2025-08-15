@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+<BaseLayout title="MATTHEWGODDARD.COM | LOGOS">
+    <Header />
+    <div class="thumb-grid">
+        <img src="/images/fhb.gif" alt="Flawed Human Being Logo Animation">
+        <img src="/images/opportunity-campus.webp" alt="Opportunity Campus Logo">
+        <img src="/images/hpc1.webp" alt="HPC Logo">
+        <img src="/images/hpc2.webp" alt="HPC Logo 2">
+        <img src="/images/leadership-sarpy.webp" alt="Leadership Sarpy Logo">
+        <img src="/images/leadership-sarpy2.webp" alt="Leadership Sarpy Logo">
+        <img src="/images/studyhacks1.webp" alt="Study Hacks Logo 1">
+        <img src="/images/studyhacks2.webp" alt="Study Hacks Logo 2">
+        <img src="/images/the-buzz1.webp" alt="The Buzz Logo 1">
+        <img src="/images/the-buzz2.webp" alt="The Buzz Logo 2">
+    </div>
+    <Footer />
+</BaseLayout>
+
+<style>
+
+    .thumb-grid {
+        margin-inline: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        max-width: 1200px;
+        display: grid;
+        gap: 1rem;
+    }
+    
+    @media screen and (min-width: 800px) {
+        
+        .thumb-grid {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+        }
+
+    }
+
+</style>
