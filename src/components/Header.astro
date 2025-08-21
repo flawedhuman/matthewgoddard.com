@@ -3,7 +3,7 @@
 ---
 <header>
     <div class="header-grid">
-        <a href="/">matthewgoddard.com</a>
+        <a href="/"><img class="logomark" src="/images/mdg-logomark.svg" alt="MatthewGoddard.com"></a>
         <a class="resume-link" href="/pdfs/matthew-goddard-resume.pdf" target="_blank">Resume</a>
     </div>
 </header>
@@ -80,8 +80,14 @@
         
         .header-grid a:not(:first-child) {
             justify-self: end;
+            align-content: center;
         }
 
+    }
+
+    .header-grid .logomark {
+        width: 3rem;
+        max-width: 100%;
     }
 
 </style>
