@@ -11,8 +11,18 @@
 <style>
 
     header {
-        padding: 1rem;
-        background-color: #000;
+        top: 0;
+        position: initial;
+        background-color: transparent;
+    }
+
+    @media screen and (min-width: 600px) {
+
+        header {
+            top: 1rem;
+            position: sticky;
+        }
+
     }
 
     .header-grid {
@@ -21,16 +31,18 @@
         grid-template-rows: 1fr 1fr;
         display: grid;
         text-align: center;
+        background-color: #000;
     }
 
     @media screen and (min-width: 600px) {
         
         .header-grid {
-            margin-inline: auto;
+            padding: 0.5rem 1.5rem;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr;
             text-align: left;
             max-width: 1200px;
+            border-radius: 100vw;
         }
 
     }
