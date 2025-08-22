@@ -31,7 +31,22 @@
         grid-template-columns: 1fr;
         display: grid;
         text-align: center;
-        background-color: #000;
+        position: relative;
+        background: #000000;
+        background: linear-gradient(147deg, rgba(0, 0, 0, 1) 0%, rgba(50, 50, 50, 0.72) 50%, rgba(0, 0, 0, 1) 100%);
+        backdrop-filter: blur(5px);
+    }
+
+    .header-grid::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(#999, #000) border-box;
+        z-index: -1;
+        border-radius: inherit;
+        border: 1px solid transparent;
+        mask: linear-gradient(black) border-box, linear-gradient(black) padding-box;
+        mask-composite: subtract;
     }
 
     @media screen and (min-width: 600px) {
