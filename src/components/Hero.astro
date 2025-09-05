@@ -2,7 +2,17 @@
 
 ---
 <section>
-    <h1>Matthew Goddard is a <span>Web Designer.</span></h1>
+    <div class="intro-grid">
+        <div>
+            <h1>Matthew Goddard is a <span>Web Designer.</span></h1>
+            <p>
+                Hello! I am a web designer and musician looking for opportunities that utilize my creativity to solve problems. 
+                I specialize in graphic design services like creating logos, icons and branding. I also dabble in video editing 
+                and production. Let's make something cool together!
+            </p>
+        </div>
+        <img class="my-face" src="/images/circle-me.webp" alt="My face.">
+    </div>
     <ul class="benefits-grid">
         <li>
             Over 20+ years of web design experience
@@ -23,51 +33,67 @@
             <a href="/pdfs/matthew-goddard-resume.pdf" target="_blank">Get in touch and let's get to work!</a>
         </li>
     </ul>
-    <!-- <iframe src="https://player.vimeo.com/video/1108233260?background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe> -->
 </section>
 
 <style>
 
-    /* iframe {
+    .intro-grid {
+        margin-block: 0rem;
+        margin-inline: auto;
+        padding-inline: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    @media screen and (min-width: 1000px) { 
+        
+        .intro-grid {
+            margin-block: 0 3rem;
+            padding-inline: 2rem;
+            grid-template-columns: 2fr 1fr;
+            max-width: 1200px;
+            align-items: center;
+        }
+        
+    }
+
+    .my-face {
         display: none;
     }
 
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 1000px) { 
         
-        iframe {
-            object-fit: cover;
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
-            top: -50px;
-            left: 0;
-            z-index: -1;
-            pointer-events: none;
+        .my-face {
             display: block;
         }
 
-    } */
+    }
 
     h1 {
-        margin-block: 5rem;
-        margin-inline: auto;
-        padding-inline: 2rem;
         font-family: var(--font-uppercase);
-        font-size: clamp(5rem, 8vw, 10rem);
+        font-size: clamp(6rem, 8vw, 7rem);
         color: #FFF;
-        text-align: center;
         line-height: 1;
         max-width: 1200px;
         text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+        text-align: center;
     }
 
     h1 span {
         color: #000;
     }
 
+    p {
+        margin-inline: auto;
+        margin-bottom: 2rem;
+        padding-inline: 2rem;
+        font-size: 1.35rem;
+        line-height: 1.75;
+    }
+
     .benefits-grid {
         margin: 0 1rem 5rem;
-        padding: 0;
+        padding-inline: 2rem;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -79,7 +105,6 @@
         
         .benefits-grid {
             margin-inline: auto;
-            padding-inline: 2rem;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             max-width: 1200px;

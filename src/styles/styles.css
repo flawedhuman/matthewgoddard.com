@@ -16,4 +16,8 @@ body {
     font-family: var(--font-lowercase), serif;
     font-weight: 400;
     font-style: normal;
+    background-size: 33px 33px;
+    background-image:
+        linear-gradient(to right, #31B2D1 1px, transparent 1px),
+        linear-gradient(to bottom, #31B2D1 1px, transparent 1px);
 }
