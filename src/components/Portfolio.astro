@@ -1,133 +1,107 @@
 ---
 
 ---
-<section>
+<section class="portfolio">
     <div class="portfolio-header">
         <h2>Portfolio</h2>
     </div>
-    <!-- Terrible Gerald's Website -->
-    <div class="portfolio-item">
-        <img src="/images/thumb-terrible-geralds.webp" alt="Terrible Gerald's Website">
-        <div>
-            <h2>Terrible Gerald's Website</h2>
-            <ul>
-                <li>Custom HTML and CSS</li>
-                <li>Custom programming including fetching content via API calls</li>
-                <li>Made with Astro and Vue JS</li>
-                <li>Using Storyblok CMS for event data population and Getform.io for customer contact</li>
-            </ul>
-        </div>
-        <a href="http://www.terriblegeralds.com" target="_blank">Visit Website</a>
-    </div>
-    <!-- Bellevue University Website -->
-    <div class="portfolio-item">
-        <img src="/images/thumb-bu-web.webp" alt="Bellevue University Website">
-        <div>
-            <h2>Bellevue University Website</h2>
-            <p>Custom HTML and CSS (Bootstrap and custom styles)</p>
-        </div>
-        <a href="bellevue">Visit Project</a>
-    </div>
-    <!-- Logos -->
-    <div class="portfolio-item">
-        <img src="/images/thumb-logos.webp" alt="Logos">
-        <div>
-            <h2>Logos</h2>
-            <p>Various logos I have designed.</p>
-        </div>
-        <a href="logos">Visit Project</a>
-    </div>
-    <!-- Album Covers -->
-    <div class="portfolio-item">
-        <img src="/images/thumb-album-covers.webp" alt="Album Covers">
-        <div>
-            <h2>Album Covers</h2>
-            <p>I make instrumental hip hop music. Here are some album covers I have designed for myself.</p>
-        </div>
-        <a href="album-covers">Visit Project</a>
-    </div>
-    <!-- Icons -->
-    <div class="portfolio-item">
-        <img src="/images/thumb-icons.webp" alt="Icons">
-        <div>
-            <h2>Icons</h2>
-            <p>Icons I have designed.</p>
-        </div>
-        <a href="icons">Visit Project</a>
+    
+    <div class="portfolio-grid">
+        <a class="portfolio-button tgs" href="http://www.terriblegeralds.com" target="_blank"><span>Terrible Gerald's Website</span></a>
+        <a class="portfolio-button bu" href="bellevue"><span>Bellevue University Website</span></a>
+        <a class="portfolio-button logos" href="logos"><span>Logos</span></a>
+        <a class="portfolio-button albums" href="album-covers"><span>Album Art</span></a>
     </div>
 </section>
 
 <style>
 
-    section {
-        padding: 1rem;
-        background-color: #000;
-    }
-
-    .portfolio-header {
-        margin-inline: auto;
-        max-width: 1200px;
+    .portfolio {
+        overflow: hidden;
     }
 
     .portfolio-header h2 {
-        margin: 0 0 2rem;
-        padding: 0;
-        color: var(--primary-blue);
+        margin: 2rem auto;
         font-family: var(--font-uppercase);
-        font-size: 2rem;
+        font-size: 3rem;
+        color: var(--primary-blue);
+        max-width: 1200px;
     }
 
-    .portfolio-item {
-        margin: 0px auto 2rem;
-        padding: 2rem;
+    .portfolio {
+        background-color: #000;
+    }
+
+    .portfolio-grid {
+        margin-inline: auto;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        gap: 2rem;
-        background-color: #FFF;
         max-width: 1200px;
-        border-radius: 4px;
     }
 
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 600px) {
         
-        .portfolio-item {
-            grid-template-columns: 250px 2fr 1fr;
-            grid-template-rows: 1fr;
+        .portfolio-grid {
+            margin-inline: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
         }
 
     }
 
-    .portfolio-item img {
-        margin-inline: auto;
-        border: 1px #000 solid;
-        display: block;
-    }
-
-    .portfolio-item h2 {
-        font-family: var(--font-uppercase);
-        font-size: 2rem;
-    }
-
-    .portfolio-item a {
-        padding: 1rem 2rem;
-        font-size: 2rem;
-        font-family: var(--font-uppercase);
-        color: #FFF;
-        background-color: #000;
-        align-self: center;
-        justify-self: center;
-        width: 100%;
-        text-align: center;
+    .portfolio-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-position: center;
+        border-radius: 4px;
+        background-repeat: no-repeat;
+        color: rgba(0, 0, 0, 0);
         text-decoration: none;
+        font-size: 3rem;
+        font-family: var(--font-uppercase);
+        height: 250px;
+        opacity: 0.55;
         transition: all 250ms ease-in-out;
         line-height: 1;
     }
 
-    .portfolio-item a:hover, .portfolio-item a:focus-visible {
+    .portfolio-button span {
+        background-color: transparent;
+        transition: all 250ms ease-in-out;
+    }
+
+    .portfolio-button:hover span, .portfolio-button:focus-visible span {
+        padding: 1rem;
+        background-color: #DDFF00;
+        border: none;
+        outline: none;
+    }
+
+    .tgs {
+        background-image: url(/images/button-tgs.webp);
+    }
+
+    .bu {
+        background-image: url(/images/button-bu.webp);
+    }
+
+    .logos {
+        background-image: url(/images/button-logos.webp);
+    }
+
+    .albums {
+        background-image: url(/images/button-album-art.webp);
+    }
+
+    .portfolio-button:hover, .portfolio-button:focus-visible {
         color: #000;
-        background-color: #FFF;
-        border: 1px #000 solid;
+        opacity: 1;
+        border: none;
+        outline: none;
     }
 
 </style>
