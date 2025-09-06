@@ -1,0 +1,146 @@
+---
+
+---
+<section class="skills">
+    <div class="skills-header">
+        <h2>Skills</h2>
+    </div>
+    
+    <div class="skills-grid">
+        <!-- HTML 5 -->
+        <div>
+            <h3>HTML 5</h3>
+            <div class="skill-bar">
+                <span class="html skill-amount">100%</span>
+            </div>
+            <h4>Expert</h4>
+        </div>
+        <!-- CSS 3 -->
+        <div>
+            <h3>CSS 3</h3>
+            <div class="skill-bar">
+                <span class="css skill-amount">100%</span>
+            </div>
+            <h4>Expert</h4>
+        </div>
+        <!-- JS -->
+        <div>
+            <h3>Javascript</h3>
+            <div class="skill-bar">
+                <span class="js skill-amount">60%</span>
+            </div>
+            <h4>Intermediate</h4>
+        </div>
+        <!-- WORDPRESS -->
+        <div>
+            <h3>Wordpress</h3>
+            <div class="skill-bar">
+                <span class="wp skill-amount">80%</span>
+            </div>
+            <h4>Advanced</h4>
+        </div>
+        <!-- ASTRO -->
+        <div>
+            <h3>Astro</h3>
+            <div class="skill-bar">
+                <span class="astro skill-amount">80%</span>
+            </div>
+            <h4>Advanced</h4>
+        </div>
+        <!-- GIT -->
+        <div>
+            <h3>Git</h3>
+            <div class="skill-bar">
+                <span class="git skill-amount">80%</span>
+            </div>
+            <h4>Advanced</h4>
+        </div>
+    </div>
+</section>
+
+<style>
+
+    .skills-header h2 {
+        margin-inline: auto;
+        margin-bottom: 2rem;
+        padding-inline: 2rem;
+        font-family: var(--font-uppercase);
+        font-size: 3rem;
+        max-width: 1200px;
+    }
+
+    @media screen and (min-width: 600px) {
+
+        .skills-header h2 {
+            margin-inline: auto;
+            margin-bottom: 2rem;
+            padding: 0;
+            font-family: var(--font-uppercase);
+            font-size: 3rem;
+            max-width: 1200px;
+        }
+
+    }
+
+    .skills-grid {
+        margin-bottom: 3rem;
+        padding-inline: 2rem;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    @media screen and (min-width: 600px) {
+        
+        .skills-grid {
+            margin-inline: auto;
+            max-width: 1200px;
+            gap: 3rem;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+        }
+    }
+
+    h3 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        font-family: var(--font-uppercase);
+    }
+
+    h4 {
+        margin-block: 0.75rem;
+        text-align: right;
+        font-family: var(--font-lowercase);
+        font-size: 1.5rem;
+    }
+
+    .skill-bar {
+        width: 100%;
+        background-color: #000;
+        border-bottom: 4px #000 solid;
+    }
+
+    /* SKILL AMOUNTS */
+
+    .skill-amount {
+        height: 12px;
+        background-color: var(--primary-yellow);
+        display: block;
+        text-indent: -9999px;
+    }
+ 
+    .html.skill-amount, .css.skill-amount {
+        width: 100%;
+    }
+    
+    .js.skill-amount {
+        width: 60%;
+    }
+
+    .wp.skill-amount, .astro.skill-amount, .git.skill-amount {
+        width: 80%;
+    }
+
+</style>

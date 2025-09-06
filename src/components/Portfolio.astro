@@ -17,17 +17,33 @@
 <style>
 
     .portfolio {
+        padding-bottom: 3rem;
         overflow: hidden;
     }
 
     .portfolio-header h2 {
         margin: 2rem auto;
+        padding-inline: 2rem;
         font-family: var(--font-uppercase);
         font-size: 3rem;
         color: var(--primary-blue);
         max-width: 1200px;
     }
 
+
+    @media screen and (min-width: 600px) {
+
+        .portfolio-header h2 {
+            margin: 2rem auto;
+            padding: 0;
+            font-family: var(--font-uppercase);
+            font-size: 3rem;
+            color: var(--primary-blue);
+            max-width: 1200px;
+        }
+
+    }
+    
     .portfolio {
         background-color: #000;
     }
@@ -64,9 +80,9 @@
         font-size: 3rem;
         font-family: var(--font-uppercase);
         height: 250px;
-        opacity: 0.55;
         transition: all 250ms ease-in-out;
         line-height: 1;
+        font-size: 2.25rem;
     }
 
     .portfolio-button span {
@@ -76,15 +92,15 @@
 
     .portfolio-button:hover span, .portfolio-button:focus-visible span {
         padding: 1rem;
-        background-color: #DDFF00;
+        background-color: var(--primary-yellow);
         border: none;
+        font-size: 3rem;
         outline: none;
     }
 
     .portfolio-button:hover, .portfolio-button:focus-visible {
         color: #000;
-        opacity: 1;
-        border: none;
+        border: 15px var(--primary-yellow) solid;
         outline: none;
     }
 
